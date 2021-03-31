@@ -1,0 +1,19 @@
+//Done by Chanukya N
+//YouTube:https://youtube.com/c/chanukyaGowda
+
+#define BLYNK_PRINT Serial    // Comment this out to disable prints and save space
+#include <ESP8266WiFi.h>
+#include <BlynkSimpleEsp8266.h>
+
+char auth[] = "---------------";  //Authentication Code sent by Blynk to Mail ID
+
+void setup()
+{
+  Serial.begin(9600);
+  Blynk.begin(auth, "--------", "--------");  //WIFI Name and Password
+}
+
+void loop()
+{
+  Blynk.run();
+}
